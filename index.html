@@ -3,7 +3,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Timesheet</title>
+      <title>Train Time</title>
 
       <link
          rel="stylesheet"
@@ -57,7 +57,6 @@
                                     <th scope="col">Frequency (min)</th>
                                     <th scope="col">Next Arrival</th>
                                     <th scope="col">Minutes Away</th>
-                                    <th scope="col">Null</th>
                                 </tr>
                             </thead>
                             <tbody id="employee-table-body">
@@ -76,20 +75,20 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label for="employeeName">Train Name</label>
-                                <input type="text" class="form-control" id="employeeName">
+                                <label for="trainName">Train Name</label>
+                                <input type="text" class="form-control" id="trainName">
                             </div>
                             <div class="form-group">
-                                <label for="role">Destination</label>
-                                <input type="text" class="form-control" id="role">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="destination">
                             </div>
                             <div class="form-group">
-                                <label for="startDate">Start Date</label>
-                                <input type="date" class="form-control" id="startDate">
+                                <label for="startTime">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="startTime" value="13:00">
                             </div>
                             <div class="form-group">
-                                <label for="monthlyRate">Frequency (min)</label>
-                                <input type="text" class="form-control" id="monthlyRate">
+                                <label for="frequency">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
                             </div>
                             <span class="text-right">
                                 <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
