@@ -23,10 +23,10 @@ function handleEmployeeData(newEmployeeName, newRole, newStartDate, newMonthlyRa
 
 function addData() {
     document.getElementById("submitButton").addEventListener("click", function(event) {
-        const employeName = document.getElementById("employeeName").value;
-        const role = document.getElementById("role").value;
-        const startDate = document.getElementById("startDate").value;
-        const monthlyRate = document.getElementById("monthlyRate").value;
+        const employeName = document.getElementById("trainName").value;
+        const role = document.getElementById("destination").value;
+        const startDate = document.getElementById("startTime").value;
+        const monthlyRate = document.getElementById("frequency").value;
         handleEmployeeData(employeName, role, startDate, monthlyRate);
         console.log("addData trigger");
     })
@@ -60,7 +60,6 @@ function updateEmployeeData() {
         startDateTD.innerText = employee.startDate;
         monthsWorkedTD.innerText = "some text here";
         monthlyRateTD.innerText = employee.monthlyRate;
-        totalBilledTD.innerText = "some more text";
 
         //append td to tr
         employeeTR.append(employeeNameTD);
@@ -77,7 +76,7 @@ function updateEmployeeData() {
     //append element to container
 }
 
-function renderEmployeeData() {
+function renderTrainData() {
     // console.log("timer test")
     const employeeTableBody = document.getElementById("employee-table-body");
     getEmployeeData(function(employeeData) {
@@ -101,7 +100,6 @@ function renderEmployeeData() {
             startDateTD.innerText = employee.startDate;
             monthsWorkedTD.innerText = "some text here";
             monthlyRateTD.innerText = employee.monthlyRate;
-            totalBilledTD.innerText = "some more text";
 
             //append td to tr
             employeeTR.append(employeeNameTD);
@@ -117,7 +115,7 @@ function renderEmployeeData() {
     })
 }
 
-renderEmployeeData();
+renderTrainData();
 
-let renderUpdate = setInterval(renderEmployeeData, 500);
+let renderUpdate = setInterval(renderTrainData, 500);
 
